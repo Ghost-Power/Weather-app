@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="weather-app">
+            <div class="search-container">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="শহরের নাম লিখুন (Enter city name...)" 
+                    class="search-input"
+                >
+                <button id="searchBtn" class="search-btn">অনুসন্ধান (Search)</button>
+            </div>
+
+            <div id="loadingSpinner" class="loading hidden">
+                <div class="spinner"></div>
+            </div>
+
+            <div id="errorMessage" class="error-message hidden"></div>
+
+            <div id="weatherInfo" class="weather-info hidden">
+                <div class="weather-header">
+                    <h2 id="cityName"></h2>
+                    <p id="dateTime"></p>
+                </div>
+
+                <div class="current-weather">
+                    <div class="weather-main">
+                        <img id="weatherIcon" src="" alt="Weather Icon" class="weather-icon">
+                        <div class="temperature">
+                            <span id="temp" class="temp-value"></span>
+                            <span class="temp-unit">°C</span>
+                        </div>
+                    </div>
+                    <p id="description" class="weather-description"></p>
+                </div>
+
+                <div class="weather-details">
+                    <div class="detail-item">
+                        <span class="detail-label">অনুভূত তাপমাত্রা (Feels Like)</span>
+                        <span id="feelsLike" class="detail-value"></span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">আর্দ্রতা (Humidity)</span>
+                        <span id="humidity" class="detail-value"></span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">বায়ু চাপ (Pressure)</span>
+                        <span id="pressure" class="detail-value"></span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">বাতাসের গতি (Wind Speed)</span>
+                        <span id="windSpeed" class="detail-value"></span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">দৃশ্যমানতা (Visibility)</span>
+                        <span id="visibility" class="detail-value"></span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">UV সূচক (UV Index)</span>
+                        <span id="uvIndex" class="detail-value"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="welcomeMessage" class="welcome-message">
+                <h1>🌤️ আবহাওয়া অ্যাপ</h1>
+                <p>আপনার শহরের বর্তমান আবহাওয়া জানুন</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
